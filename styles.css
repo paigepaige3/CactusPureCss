@@ -1,0 +1,164 @@
+/* #fcf1f1 = background
+#f9e0ae = circle
+#835050 = pot
+#799351 = cactus
+#335d2d = cactus lines */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.canvas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fcf1f1;
+    width: 100%;
+    height: 100vh;
+}
+
+.circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 80vmin;
+    height: 80vmin;
+    border-radius: 50%;    
+    background: #f9e0ae;
+}
+
+.pot {
+    position: absolute;
+    border-bottom: 25vmin solid #835050;
+    border-left: 10vmin solid transparent;
+    border-right: 10vmin solid transparent;
+    height: 0;
+    width: 40vmin;
+    bottom: 15vmin;
+    transform: rotate(180deg);
+    border-radius: 3vmin;
+}
+
+.pot::after {
+    content: "";
+    position: absolute;
+    width: 20vmin;
+    height: 1vmin;
+    background: black;
+}
+
+.eyes {
+    position: absolute;
+    width: 5vmin;
+    height: 5vmin;
+    background: black;
+    border-radius: 50%;
+    bottom: -15vmin;
+    right:13vmin;
+    box-shadow: 10vmin 0 black;
+}
+
+.cheeks {
+    position: absolute;
+    width: 5vmin;
+    height: 2vmin;
+    top:7.5vmin;
+    left: 2vmin;
+    background: red;
+    border-radius: 50%;
+    opacity: 20%;
+    box-shadow: 10vmin 0 red;
+}
+.mouth{
+    position: absolute;
+    width: 4vmin;
+    height: 4vmin;
+    top: 5vmin;
+    left:7.5vmin;
+    border-radius: 50%;
+    background: transparent;
+    border-top: 1.5vmin solid black;
+}
+
+.cactus {
+    position: absolute;
+    width: 17vmin;
+    height: 30vmin;
+    top: 12vmin;
+    left:23vmin;
+    background: #799351;
+    border-radius: 45%;
+    border: 1vmin solid black;
+}
+
+.cactus::before {
+    content: "";
+    position: absolute;
+    width:5vmin;
+    height:30vmin;
+    left: 6vmin;
+    background: #335d2d;
+    border-radius: 50%;
+    background: transparent;
+    border-right: 1vmin solid #335d2d;
+}
+
+.cactus::after {
+    content: "";
+    position: absolute;
+    width:5vmin;
+    height:30vmin;
+    left: 3vmin;
+    background: #335d2d;
+    border-radius: 50%;
+    background: transparent;
+    border-left: 1vmin solid #335d2d;
+}
+
+.cactusSmall {
+    position: absolute;
+    width: 17vmin;
+    height: 18vmin;
+    top: 25vmin;
+    right: 25vmin;
+    background: #799351;
+    border-radius: 45%;
+    border: 1vmin solid black;
+}
+
+.cactusSmall::before {
+    content: "";
+    position: absolute;
+    width:5vmin;
+    height:15vmin;
+    left: 6vmin;
+    background: #335d2d;
+    border-radius: 50%;
+    background: transparent;
+    border-right: 1vmin solid #335d2d;
+}
+
+.cactusSmall::after {
+    content: "";
+    position: absolute;
+    width:5vmin;
+    height:15vmin;
+    right: 6.2vmin;
+    background: #335d2d;
+    border-radius: 50%;
+    background: transparent;
+    border-left: 1vmin solid #335d2d;
+}
+
+.pricks {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 1vmin solid transparent;
+    border-right:1vmin solid transparent;
+    border-bottom: 7vmin solid #335d2d;
+    transform: rotate(-45deg);
+}
